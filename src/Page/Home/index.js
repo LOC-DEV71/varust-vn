@@ -3,6 +3,7 @@ import { TagOutlined, FileTextOutlined, SettingOutlined, PushpinOutlined, Dollar
 import SectionOne from "./section/section-1";
 import SectionTwo from "./section/section-2";
 import SectionThree from "./section/section-3";
+import SectionFour from "./section/section-4";
 
 function Home(){
     return(
@@ -57,6 +58,9 @@ function Home(){
             </div>
             <div className="layout__main-three">
                 <SectionThree/>
+            </div>
+            <div className="layout__main-four">
+                <SectionFour/>
             </div>
         </>
     )
