@@ -1,0 +1,65 @@
+import { Link } from "react-router-dom";
+import { TagOutlined, FileTextOutlined, SettingOutlined, PushpinOutlined, DollarOutlined, SecurityScanOutlined } from '@ant-design/icons';
+import SectionOne from "./section/section-1";
+import SectionTwo from "./section/section-2";
+import SectionThree from "./section/section-3";
+
+function Home(){
+    return(
+        <>
+            <div className="layout__main-top">
+                <Link>
+                    <TagOutlined />
+                    <div className="layout__main-top-title">
+                        Build PC tặng màn 240Hz
+                    </div>
+                </Link>
+                <Link>
+                    <FileTextOutlined />
+                    <div className="layout__main-top-title">
+                        Tin tức công nghệ
+                    </div>
+                </Link>
+                <Link>
+                    <SettingOutlined />
+                    <div className="layout__main-top-title">
+                        Dịch vụ sửa chữa
+                    </div>
+                </Link>
+                <Link>
+                    <PushpinOutlined />
+                    <div className="layout__main-top-title">
+                        Dịch vụ kĩ thuật tại nhà
+                    </div>
+                </Link>
+                <Link>
+                    <DollarOutlined />
+                    <div className="layout__main-top-title">
+                        Thay cũ đổi mới
+                    </div>
+                </Link>
+                <Link>
+                    <SecurityScanOutlined />
+                    <div className="layout__main-top-title">
+                        Tra cứu bảo hành
+                    </div>
+                </Link>
+            </div>
+            
+
+
+            <div className="layout__main-sectionOne">
+                <SectionOne/>
+            </div>
+
+            <div className="layout__main-two">
+                <SectionTwo/>
+            </div>
+            <div className="layout__main-three">
+                <SectionThree/>
+            </div>
+        </>
+    )
+}
+
+export default Home;

@@ -1,0 +1,28 @@
+.section3{
+    background: rgb(0, 128, 255);
+    border-radius: 10px;
+
+    h3{
+        font-size: 30px;
+        color: white;
+        padding: 30px 30px 0px 30px;
+        svg{
+            color: yellow;
+        }
+    }
+
+    &__main{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 30px;
+
+       div{
+        height: 420px;
+        width: 210px;
+        background: white;
+        text-align: center;
+        border-radius: 8px;
+       }
+    }
+}
