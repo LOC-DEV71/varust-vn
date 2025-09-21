@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div className="layout__header-menu-user">
-                    <img src='' alt=''/>
+                    <img src='k' alt=''/>
                 </div>
             </>
         )

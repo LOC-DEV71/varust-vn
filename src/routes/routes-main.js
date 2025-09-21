@@ -1,6 +1,8 @@
 import MainLayout from "../components/Main-Layout";
-import About from "../Page/about";
+import Updating from "../Page/updating";
+import ProductsScreen from "../Page/AllProduct/screenProducts";
 import Home from "../Page/Home/index";
+import NotFound from "../Page/NotFound";
 
 export const routes = () => [
     {
@@ -12,8 +14,16 @@ export const routes = () => [
                 element: <Home/>
             }, 
             {
-                path: "about",
-                element: <About/>
+                path: "updating",
+                element: <Updating/>
+            },
+            {
+                path: "screen-products/:id",
+                element: <ProductsScreen/>
+            },
+            { 
+                path: "*", 
+                element: <NotFound />
             }
         ]
     }

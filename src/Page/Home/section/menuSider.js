@@ -10,22 +10,21 @@ function MenuSider(){
             icon: <DesktopOutlined/>,
             key: "1",
             children: [
-            { key: '9', label: 'Option 9' },
-            { key: '10', label: 'Option 10' },
-            { key: '11', label: 'Option 11' },
-            { key: '12', label: 'Option 12' },
+                { key: '1-1', label: 'Option 1' },
+                { key: '1-2', label: 'Option 2' },
+                { key: '1-3', label: 'Option 3' },
+                { key: '1-4', label: 'Option 4' },
             ],
-
         },
         {
             label: <Link to={"/"}>PC</Link>,
             icon: <DesktopOutlined />,
             key: "2",
             children: [
-            { key: '9', label: 'Option 9' },
-            { key: '10', label: 'Option 10' },
-            { key: '11', label: 'Option 11' },
-            { key: '12', label: 'Option 12' },
+                { key: '2-1', label: 'Option 1' },
+                { key: '2-2', label: 'Option 2' },
+                { key: '2-3', label: 'Option 3' },
+                { key: '2-4', label: 'Option 4' },
             ],
         },
         {
@@ -33,10 +32,10 @@ function MenuSider(){
             icon: <LaptopOutlined />,
             key: "3",
             children: [
-            { key: '9', label: 'Option 9' },
-            { key: '10', label: 'Option 10' },
-            { key: '11', label: 'Option 11' },
-            { key: '12', label: 'Option 12' },
+                { key: '3-1', label: 'Option 1' },
+                { key: '3-2', label: 'Option 2' },
+                { key: '3-3', label: 'Option 3' },
+                { key: '3-4', label: 'Option 4' },
             ],
         },
         {
@@ -44,10 +43,10 @@ function MenuSider(){
             icon: <ControlOutlined />,
             key: "4",
             children: [
-            { key: '9', label: 'Option 9' },
-            { key: '10', label: 'Option 10' },
-            { key: '11', label: 'Option 11' },
-            { key: '12', label: 'Option 12' },
+                { key: '4-1', label: 'Option 1' },
+                { key: '4-2', label: 'Option 2' },
+                { key: '4-3', label: 'Option 3' },
+                { key: '4-4', label: 'Option 4' },
             ],
         },
         {
@@ -55,10 +54,10 @@ function MenuSider(){
             icon: <CustomerServiceOutlined/>,
             key: "5",
             children: [
-            { key: '9', label: 'Option 9' },
-            { key: '10', label: 'Option 10' },
-            { key: '11', label: 'Option 11' },
-            { key: '12', label: 'Option 12' },
+                { key: '5-1', label: 'Option 1' },
+                { key: '5-2', label: 'Option 2' },
+                { key: '5-3', label: 'Option 3' },
+                { key: '5-4', label: 'Option 4' },
             ],
         },
         {
@@ -66,10 +65,10 @@ function MenuSider(){
             icon: <FireOutlined />,
             key: "6",
             children: [
-            { key: '9', label: 'Option 9' },
-            { key: '10', label: 'Option 10' },
-            { key: '11', label: 'Option 11' },
-            { key: '12', label: 'Option 12' },
+                { key: '6-1', label: 'Option 1' },
+                { key: '6-2', label: 'Option 2' },
+                { key: '6-3', label: 'Option 3' },
+                { key: '6-4', label: 'Option 4' },
             ],
         },
         {
@@ -77,10 +76,10 @@ function MenuSider(){
             icon: <BugOutlined />,
             key: "7",
             children: [
-            { key: '9', label: 'Option 9' },
-            { key: '10', label: 'Option 10' },
-            { key: '11', label: 'Option 11' },
-            { key: '12', label: 'Option 12' },
+                { key: '7-1', label: 'Option 1' },
+                { key: '7-2', label: 'Option 2' },
+                { key: '7-3', label: 'Option 3' },
+                { key: '7-4', label: 'Option 4' },
             ],
         },
         {
@@ -88,10 +87,10 @@ function MenuSider(){
             icon: <ClusterOutlined />,
             key: "8",
             children: [
-            { key: '9', label: 'Option 9' },
-            { key: '10', label: 'Option 10' },
-            { key: '11', label: 'Option 11' },
-            { key: '12', label: 'Option 12' },
+                { key: '8-1', label: 'Option 1' },
+                { key: '8-2', label: 'Option 2' },
+                { key: '8-3', label: 'Option 3' },
+                { key: '8-4', label: 'Option 4' },
             ],
         },
         {
@@ -99,10 +98,10 @@ function MenuSider(){
             icon: <HddOutlined />,
             key: "9",
             children: [
-            { key: '9', label: 'Option 9' },
-            { key: '10', label: 'Option 10' },
-            { key: '11', label: 'Option 11' },
-            { key: '12', label: 'Option 12' },
+                { key: '9-1', label: 'Option 1' },
+                { key: '9-2', label: 'Option 2' },
+                { key: '9-3', label: 'Option 3' },
+                { key: '9-4', label: 'Option 4' },
             ],
         },
         {
@@ -110,10 +109,10 @@ function MenuSider(){
             icon: <FireOutlined />,
             key: "10",
             children: [
-            { key: '9', label: 'Option 9' },
-            { key: '10', label: 'Option 10' },
-            { key: '11', label: 'Option 11' },
-            { key: '12', label: 'Option 12' },
+                { key: '10-1', label: 'Option 1' },
+                { key: '10-2', label: 'Option 2' },
+                { key: '10-3', label: 'Option 3' },
+                { key: '10-4', label: 'Option 4' },
             ],
         },
         {
@@ -121,10 +120,10 @@ function MenuSider(){
             icon: <FormOutlined />,
             key: "11",
             children: [
-            { key: '9', label: 'Option 9' },
-            { key: '10', label: 'Option 10' },
-            { key: '11', label: 'Option 11' },
-            { key: '12', label: 'Option 12' },
+                { key: '11-1', label: 'Option 1' },
+                { key: '11-2', label: 'Option 2' },
+                { key: '11-3', label: 'Option 3' },
+                { key: '11-4', label: 'Option 4' },
             ],
         },
         {
@@ -132,10 +131,10 @@ function MenuSider(){
             icon: <ThunderboltOutlined/>,
             key: "12",
             children: [
-            { key: '9', label: 'Option 9' },
-            { key: '10', label: 'Option 10' },
-            { key: '11', label: 'Option 11' },
-            { key: '12', label: 'Option 12' },
+                { key: '12-1', label: 'Option 1' },
+                { key: '12-2', label: 'Option 2' },
+                { key: '12-3', label: 'Option 3' },
+                { key: '12-4', label: 'Option 4' },
             ],
         },
         {
@@ -143,10 +142,10 @@ function MenuSider(){
             icon: <ContainerOutlined />,
             key: "13",
             children: [
-            { key: '9', label: 'Option 9' },
-            { key: '10', label: 'Option 10' },
-            { key: '11', label: 'Option 11' },
-            { key: '12', label: 'Option 12' },
+                { key: '13-1', label: 'Option 1' },
+                { key: '13-2', label: 'Option 2' },
+                { key: '13-3', label: 'Option 3' },
+                { key: '13-4', label: 'Option 4' },
             ],
         },
         {
@@ -154,10 +153,10 @@ function MenuSider(){
             icon: <SoundOutlined/>,
             key: "14",
             children: [
-            { key: '9', label: 'Option 9' },
-            { key: '10', label: 'Option 10' },
-            { key: '11', label: 'Option 11' },
-            { key: '12', label: 'Option 12' },
+                { key: '14-1', label: 'Option 1' },
+                { key: '14-2', label: 'Option 2' },
+                { key: '14-3', label: 'Option 3' },
+                { key: '14-4', label: 'Option 4' },
             ],
         },
         {
@@ -165,25 +164,25 @@ function MenuSider(){
             icon: <GiftOutlined/>,
             key: "15",
             children: [
-            { key: '9', label: 'Option 9' },
-            { key: '10', label: 'Option 10' },
-            { key: '11', label: 'Option 11' },
-            { key: '12', label: 'Option 12' },
+                { key: '15-1', label: 'Option 1' },
+                { key: '15-2', label: 'Option 2' },
+                { key: '15-3', label: 'Option 3' },
+                { key: '15-4', label: 'Option 4' },
             ],
         },
         {
-            label: <Link to={"/"}>sạc dự phòng</Link>,
+            label: <Link to={"/"}>Sạc dự phòng</Link>,
             icon: <ThunderboltOutlined />,
             key: "16",
             children: [
-            { key: '9', label: 'Option 9' },
-            { key: '10', label: 'Option 10' },
-            { key: '11', label: 'Option 11' },
-            { key: '12', label: 'Option 12' },
+                { key: '16-1', label: 'Option 1' },
+                { key: '16-2', label: 'Option 2' },
+                { key: '16-3', label: 'Option 3' },
+                { key: '16-4', label: 'Option 4' },
             ],
         },
-    
-    ]
+    ];
+
     return(
         <>
             <Menu
@@ -197,3 +196,6 @@ function MenuSider(){
     )
 }
 export default MenuSider;
+
+
+    
