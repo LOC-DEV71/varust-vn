@@ -1,27 +1,68 @@
 import { ThunderboltOutlined } from "@ant-design/icons";
 import './section-3.scss';
+import { Link } from "react-router-dom";
+import { getApi } from '../../../service';
+import 'slick-carousel/slick/slick.css'; // Import CSS của slick
+import 'slick-carousel/slick/slick-theme.css';
+import './section-5.scss';
+import Slider from 'react-slick'; // Thay Carousel của Ant Design bằng react-slick
+import { useEffect, useState } from "react";
+import './section-3.scss';
+
 function SectionThree(){
+    const [data, setData] = useState([]);
+    useEffect(() => {
+        const fetchApi = async () => {
+          const response = await getApi("products");
+          setData(response);
+        };
+        fetchApi();
+      }, []);
+
+    const settings = {
+        pauseOnHover: false,
+        dots: false, // Ẩn dots
+        infinite: true, // Lặp vô tận
+        speed: 500, // Tốc độ chuyển slide
+        slidesToShow: 5, // Hiển thị 5 sản phẩm
+        slidesToScroll: 1, // Chuyển 1 sản phẩm mỗi lần
+        autoplay: true, // Bật autoplay
+        autoplaySpeed: 2500, // 3 giây mỗi lần chuyển
+        arrows: true, // Bật mũi tên
+    };
+
+    const productSale = data.filter(item => item.sale > 0)
+    const productSaleAwait = productSale ? productSale : [];
     return(
         <>
             <div className="section3">
-                <h3> <ThunderboltOutlined/> Flash Sale</h3>
-                    <div className="section3__main">
-                        <div>
-                            sp1
-                        </div>
-                        <div>
-                            sp2
-                        </div>
-                        <div>
-                            sp3
-                        </div>
-                        <div>
-                            sp4
-                        </div>
-                        <div>
-                            sp5
-                        </div>
-                    </div>
+                <h3 className="section3__titletop"> <ThunderboltOutlined/> Flash Sale</h3>
+                <Slider {...settings}>
+                    {productSaleAwait.map(item => (
+                        <Link to={`screen-products/${item.id}`} className="section3__products-flex-item" title={item.title} key={item.id} >
+                            <div className="section3__products-flex-img">
+                                <img src={item.image} alt={item.title} />
+                            </div>
+                            <div className="section3__products-flex-title">
+                                <p className='title'>{item.title}</p>
+                                {item.sale>0 ? (<>
+                                <p className='old-price'>{item.price.toLocaleString('vi-VN')} VND</p>
+                                </>):
+                                (<>
+                                
+                                </>
+                            )}
+                                <p className='new-price'>{item.sale>0 ? ((item.price - item.price*item.sale/100).toLocaleString('vi-VN')): (item.price.toLocaleString('vi-VN'))} VND</p>
+                                <div className='section3__products-flex-title-desc'>
+                                    {item.sale > 0 ? (<>
+                                        <p className='sale'>-{item.sale}%</p>
+                                    </>):("")}
+                                    <p className='quantity'>Số lượng: <span>{item.quantity}</span></p>
+                                </div>
+                            </div>
+                        </Link>
+                    ))}
+                    </Slider>
             </div>  
         </>
     )

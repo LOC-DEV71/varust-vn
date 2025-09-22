@@ -1,0 +1,24 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 30px 50px 60px 50px;
+
+    &__one{
+        line-height: 33px;
+        p{
+            font-weight: 600;
+            font-size: 17px;
+            user-select: none;
+            color: rgb(42, 42, 42);
+        }
+        a{
+            text-decoration: none;
+            color: black;
+
+            span{
+                color: rgb(0, 104, 223);
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@ import {Link, useParams} from 'react-router-dom';
 import {HomeOutlined, RightOutlined} from '@ant-design/icons';
 import { Carousel } from 'antd';
 import { useEffect, useState } from 'react';
-import { getNews } from '../../service';
+import { getApi } from '../../service';
 import './index.scss';
 function News(){
     const [data, setData] = useState([]);
@@ -11,7 +11,7 @@ function News(){
     
     useEffect(() => {
         const fetchApi = async () =>{
-            const response = await getNews();
+            const response = await getApi("news");
             setData(response);
         }
         fetchApi();

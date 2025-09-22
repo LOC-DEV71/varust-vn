@@ -3,6 +3,7 @@ import TopBar from "./Top-bar";
 import './index.scss';
 import Menu from "./menu";
 import { useEffect, useState } from "react";
+import Footer from "./footer";
 
 function MainLayout(){
       const [isSticky, setIsSticky] = useState(false);
@@ -34,7 +35,7 @@ function MainLayout(){
                 </main>
 
                 <footer className="layout__footer">
-
+                    <Footer/>
                 </footer>
             </div>
         </>

@@ -1,29 +1,113 @@
-.section3{
-    background: rgb(0, 128, 255);
-    border-radius: 10px;
-    margin-bottom: 20px;
+.section3 {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background: #0080FF;
+  padding: 15px 30px 30px 30px;
+  border-radius: 8px;
+  margin: 20px 0; 
 
-    h3{
-        font-size: 30px;
-        color: white;
-        padding: 30px 30px 0px 30px;
-        svg{
-            color: yellow;
+  &__titletop{
+    font-size: 28px;
+    color: white;
+
+    svg{
+      color: yellow;
+      font-size: 30px;
+    }
+  }
+
+  &__products {
+    &-flex-item {
+      border-radius: 8px; 
+      margin: 0 5px; 
+      text-decoration: none;
+      color: black;
+      font-weight: 610;
+      background: white;
+      height: 420px;
+    }
+
+    &-flex-item:hover .title{
+        color: rgb(0, 128, 255);
+    }
+
+    &-flex-img {
+      width: 230px;
+      height: 210px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding: 10px;
+      }
+    }
+
+    &-flex-title {
+      width: 230px;
+      padding: 10px; 
+
+      p {
+        margin: 5px 0;
+      }
+
+      .old-price{
+        text-decoration: line-through;
+        color: gray;
+      }
+      .new-price{
+        color: rgb(255, 82, 59);
+        font-weight: 610;
+      }
+
+      .sale{
+        border: 1px solid red;
+        background: rgb(255, 207, 200);
+        padding: 3px 5px;
+        border-radius: 30%;
+        color: red;
+      }
+
+      .quantity{
+
+        span{
+            color: red;
         }
-    }
+      }
 
-    &__main{
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-       padding: 30px;
-
-       div{
-        height: 420px;
-        width: 210px;
-        background: white;
-        text-align: center;
-        border-radius: 8px;
-       }
+      &-desc{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
+  }
+
+  .slick-slide {
+    height: 450px; 
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slick-list {
+    overflow: hidden; 
+    margin: 0 -10px; 
+  }
+
+  .slick-prev,
+  .slick-next {
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+  }
+
+  .slick-prev {
+    left: -10px; /* Đẩy mũi tên ra ngoài */
+  }
+
+  .slick-next {
+    right: -10px;
+  }
 }

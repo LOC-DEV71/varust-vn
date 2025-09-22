@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { getProducts } from "../../../service";
+import { getApi } from "../../../service";
 
 function RenderAllProducts(){
     const [data, setData] = useState([]);
     useEffect(() => {
         const fetchApi = async () =>{
-            const respone = await getProducts();
+            const respone = await getApi("products");
             setData(respone);
         }
         fetchApi();

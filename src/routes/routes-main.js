@@ -1,6 +1,6 @@
 import MainLayout from "../components/Main-Layout";
 import Updating from "../Page/updating";
-import ProductsScreen from "../Page/AllProduct/screenProducts";
+import ProductsScreen from "../Page/AllProduct/render-oneProduct";
 import Home from "../Page/Home/index";
 import NotFound from "../Page/NotFound";
 import News from "../Page/News";

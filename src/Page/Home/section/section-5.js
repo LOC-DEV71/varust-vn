@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { RightOutlined } from '@ant-design/icons';
 import { useEffect, useState } from 'react';
 import Slider from 'react-slick'; // Thay Carousel của Ant Design bằng react-slick
-import { getProducts } from '../../../service';
+import { getApi } from '../../../service';
 import 'slick-carousel/slick/slick.css'; // Import CSS của slick
 import 'slick-carousel/slick/slick-theme.css';
 import './section-5.scss';
@@ -12,7 +12,7 @@ function SectionFive() {
 
   useEffect(() => {
     const fetchApi = async () => {
-      const response = await getProducts();
+      const response = await getApi("products");
       setData(response);
     };
     fetchApi();
@@ -31,6 +31,10 @@ function SectionFive() {
     arrows: true, // Bật mũi tên
   };
 
+  const screen = data.filter(item => item.category === "screen");
+  const screenAwait = screen ? screen : [];
+  // console.log(screenAwait)
+
 
   return (
     <div className="section5">
@@ -43,7 +47,7 @@ function SectionFive() {
 
       <div className="section5__products">
         <Slider {...settings}>
-          {data.map(item => (
+          {screenAwait.map(item => (
             <Link to={`screen-products/${item.id}`} className="section5__products-flex-item" title={item.title} key={item.id} >
               <div className="section5__products-flex-img">
                 <img src={item.image} alt={item.title} />

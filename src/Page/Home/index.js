@@ -5,6 +5,7 @@ import SectionTwo from "./section/section-2";
 import SectionThree from "./section/section-3";
 import SectionFour from "./section/section-4";
 import SectionFive from "./section/section-5";
+import SectionSix from "./section/section-6";
 
 function Home(){
     return(
@@ -65,6 +66,9 @@ function Home(){
             </div>
             <div className="layout__main-five">
                 <SectionFive/>
+            </div>
+            <div className="layout__main-six">
+                <SectionSix/>
             </div>
 
         </>
