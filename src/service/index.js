@@ -1,7 +1,7 @@
 import { get } from "../utils"
 
 export const getProducts = async () =>{
-    const result = await get();
+    const result = await get("products");
     return result;
 }
 export const getNews = async () =>{
