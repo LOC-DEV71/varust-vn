@@ -36,7 +36,7 @@ function SectionFive() {
     <div className="section5">
       <div className="section5__title">
         <h5>Màn hình bán chạy</h5>
-        <Link to={'/'}>
+        <Link to={'/render-all-products'}>
           Xem tất cả <RightOutlined />
         </Link>
       </div>

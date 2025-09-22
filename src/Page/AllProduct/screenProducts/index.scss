@@ -3,6 +3,7 @@
     box-shadow: rgba(121, 120, 120, 0.2) 0px 2px 8px 0px; 
     border-radius: 8px;     
     padding: 50px;
+    margin-bottom: 50px;
     &__hero{
         display: flex;
         align-items: center;
@@ -60,6 +61,27 @@
         &-info{
             flex: 1;
 
+            button{
+                width: 100%;
+                background: #E52A34;
+                border: none;
+                border-radius: 10px;
+                padding: 20px;
+                cursor: pointer;
+                p{
+                    font-weight: 600;
+                    font-size: 18px;
+                    color: white;
+                    padding: 0;
+                    margin: 0;
+                    margin-bottom: 10px;
+                }
+                span{
+                    color: white;
+                }
+
+            }
+
             .title{
                 font-size: 22px;
                 font-weight: 620;
@@ -96,7 +118,65 @@
                     border-radius: 35%;
                     background: rgb(255, 213, 213);
                 }
+
             }
         }
     }
+}
+
+.infoProducts{
+    display: flex;
+    gap: 30px;
+
+    &__eva{
+        width: 900px;
+        // box-shadow: rgba(121, 120, 120, 0.2) 0px 2px 8px 0px; 
+        // padding: 25px;
+
+        &-top{
+            box-shadow: rgba(121, 120, 120, 0.2) 0px 2px 8px 0px; 
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        &-bot{
+            box-shadow: rgba(121, 120, 120, 0.2) 0px 2px 8px 0px; 
+            padding: 25px;
+        }
+
+        h5{
+            font-size: 22px;
+        }
+    }
+
+    &__news{
+        flex: 1;
+        box-shadow: rgba(121, 120, 120, 0.2) 0px 2px 8px 0px; 
+        padding: 15px;
+        h5{
+            font-size: 22px;
+        }
+
+        &-info{
+            width: 400px;
+            display: flex;
+            gap: 10px;
+            padding: 15px;
+            text-decoration: none;
+            color: black;
+
+
+            &-img{
+                width: 400px;
+                img{
+                width: 100%;
+                }
+            }
+
+            .title{
+                flex: 1;
+                max-width: 120px;
+            }
+        }
+    }
+
 }

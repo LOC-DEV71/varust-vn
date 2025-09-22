@@ -3,6 +3,8 @@ import Updating from "../Page/updating";
 import ProductsScreen from "../Page/AllProduct/screenProducts";
 import Home from "../Page/Home/index";
 import NotFound from "../Page/NotFound";
+import News from "../Page/News";
+import RenderAllProducts from "../Page/AllProduct/renderAllProducts";
 
 export const routes = () => [
     {
@@ -19,11 +21,22 @@ export const routes = () => [
             },
             {
                 path: "screen-products/:id",
-                element: <ProductsScreen/>
+                element: <ProductsScreen/>,
+                children: [
+                    
+                ]
             },
             { 
                 path: "*", 
                 element: <NotFound />
+            },
+            {
+                path: "news/:id",
+                element: <News/>
+            },
+            {
+                path: "render-all-products",
+                element: <RenderAllProducts/>
             }
         ]
     }
