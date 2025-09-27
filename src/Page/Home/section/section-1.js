@@ -6,6 +6,7 @@
     const {Sider, Content} = Layout;
     function SectionOne(){
         const [collapse, setCollapse] = useState(true);
+        // const [renderSider, setRenderSider] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
