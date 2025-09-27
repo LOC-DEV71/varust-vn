@@ -59,7 +59,7 @@ import { useEffect, useState } from 'react';
             <>
                 <div className={logo ? "layout__header-menu-logo":"layout__header-menu-logo-1"}>
                     <Link to={"/"}>
-                        <img src={logo ? ("/logo-varust-vn.webp"):("/logo-varust-vn-1.png")} alt="logo" />
+                        <img src={logo ? ("/logo-varust-vn.png"):("/logo-varust-vn-1.webp")} alt="logo" />
                     </Link>
                 </div>
                 <div className="layout__header-menu-search">
