@@ -1,6 +1,20 @@
 import { Link } from "react-router-dom";
 import './footer.scss';
+import { useEffect, useState } from "react";
 function Footer(){
+    const [collapse, setCollapse] = useState(true)
+    const [collapse2, setCollapse2] = useState(true)
+    const [collapse3, setCollapse3] = useState(true)
+    useEffect(() => {
+        const handleResize = () =>{
+            setCollapse(window.innerWidth > 1175);
+            setCollapse2(window.innerWidth > 750)
+            setCollapse3(window.innerWidth > 730)
+        }
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize)
+    },[])
     return(
         <>
             <div className="footer">
@@ -17,13 +31,21 @@ function Footer(){
                     <Link to={"/updating"}>Chính sách bảo mật</Link><br/>
                 </div>
                 <div className="footer__one">
-                    <p>Thông tin</p>
-                    <Link to={"/updating"}>Hệ thống cửa hàng</Link><br/>
-                    <Link to={"/updating"}>Hướng dẫn mua hàng</Link><br/>
-                    <Link to={"/updating"}>Hướng dẫn thanh toán</Link><br/>
-                    <Link to={"/updating"}>Hướng dẫn trả góp</Link><br/>
-                    <Link to={"/updating"}>Tra cứu địa chỉ bảo hành</Link><br/>
-                    <Link to={"/updating"}>Build PC</Link><br/>
+                    {collapse3 ? (
+                        <>
+                            <p>Thông tin</p>
+                            <Link to={"/updating"}>Hệ thống cửa hàng</Link><br/>
+                            <Link to={"/updating"}>Hướng dẫn mua hàng</Link><br/>
+                            <Link to={"/updating"}>Hướng dẫn thanh toán</Link><br/>
+                            {collapse2 ? (
+                                <>
+                                    <Link to={"/updating"}>Hướng dẫn trả góp</Link><br/>
+                                    <Link to={"/updating"}>Tra cứu địa chỉ bảo hành</Link><br/>
+                                    <Link to={"/updating"}>Build PC</Link><br/>
+                                </>
+                            ) : ("")}
+                        </>
+                    ) : ("")}
                 </div>
                 <div className="footer__one">
                     <p>Tổng đài hỗ trợ</p>
@@ -33,21 +55,25 @@ function Footer(){
                     <Link to={"/updating"}>Email: <span>loclc8533@ut.edu.vn</span></Link><br/>
                 </div>
                 <div className="footer__one">
-                    <p>Đơn vị vận chuyển</p>
-                    <div className="footer__five-img">
-                        <Link to={"/updating"}>
-                            <img src="/speed1.webp" alt="speed" />
-                        </Link>
-                        <Link to={"/updating"}>
-                            <img src="/speed2.webp" alt="speed" />
-                        </Link>
-                        <Link to={"/updating"}>
-                            <img src="/speed3.webp" alt="speed" />                        
-                        </Link>
-                        <Link to={"/updating"}>
-                            <img src="/speed4.webp" alt="speed" />
-                        </Link>
-                    </div>
+                    {collapse ? (
+                        <>
+                            <p>Đơn vị vận chuyển</p>
+                            <div className="footer__five-img">
+                                <Link to={"/updating"}>
+                                    <img src="/speed1.webp" alt="speed" />
+                                </Link>
+                                <Link to={"/updating"}>
+                                    <img src="/speed2.webp" alt="speed" />
+                                </Link>
+                                <Link to={"/updating"}>
+                                    <img src="/speed3.webp" alt="speed" />                        
+                                </Link>
+                                <Link to={"/updating"}>
+                                    <img src="/speed4.webp" alt="speed" />
+                                </Link>
+                            </div>
+                        </>
+                    ) : ("")}
                 </div>
             </div>
         </>
