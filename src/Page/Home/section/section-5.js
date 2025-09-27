@@ -1,80 +1,106 @@
-import { Link } from 'react-router-dom';
-import { RightOutlined } from '@ant-design/icons';
-import { useEffect, useState } from 'react';
-import Slider from 'react-slick'; // Thay Carousel của Ant Design bằng react-slick
-import { getApi } from '../../../service';
-import 'slick-carousel/slick/slick.css'; // Import CSS của slick
-import 'slick-carousel/slick/slick-theme.css';
-import './section-5.scss';
+  import { Link } from 'react-router-dom';
+  import { RightOutlined } from '@ant-design/icons';
+  import { useEffect, useState } from 'react';
+  import Slider from 'react-slick'; // Thay Carousel của Ant Design bằng react-slick
+  import { getApi } from '../../../service';
+  import 'slick-carousel/slick/slick.css'; // Import CSS của slick
+  import 'slick-carousel/slick/slick-theme.css';
+  import './section-5.scss';
 
-function SectionFive() {
-  const [data, setData] = useState([]);
+  function SectionFive() {
+    const [data, setData] = useState([]);
 
-  useEffect(() => {
-    const fetchApi = async () => {
-      const response = await getApi("products");
-      setData(response);
+    useEffect(() => {
+      const fetchApi = async () => {
+        const response = await getApi("products");
+        setData(response);
+      };
+      fetchApi();
+    }, []);
+
+    // Cấu hình react-slick
+    const settings = {
+      pauseOnHover: false,
+      dots: false, // Ẩn dots
+      infinite: true, // Lặp vô tận
+      speed: 500, // Tốc độ chuyển slide
+      slidesToShow: 5, // Hiển thị 5 sản phẩm
+      slidesToScroll: 1, // Chuyển 1 sản phẩm mỗi lần
+      autoplay: true, // Bật autoplay
+      autoplaySpeed: 2500, // 3 giây mỗi lần chuyển
+      arrows: true, // Bật mũi tên
+      responsive: [
+            {
+            breakpoint: 1500, // màn hình <= 1111px
+            settings: {
+                slidesToShow: 4, // hiển thị 3 sản phẩm
+            }
+            },
+            {
+                breakpoint:1270,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 1005,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 748,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     };
-    fetchApi();
-  }, []);
 
-  // Cấu hình react-slick
-  const settings = {
-    pauseOnHover: false,
-    dots: false, // Ẩn dots
-    infinite: true, // Lặp vô tận
-    speed: 500, // Tốc độ chuyển slide
-    slidesToShow: 5, // Hiển thị 5 sản phẩm
-    slidesToScroll: 1, // Chuyển 1 sản phẩm mỗi lần
-    autoplay: true, // Bật autoplay
-    autoplaySpeed: 2500, // 3 giây mỗi lần chuyển
-    arrows: true, // Bật mũi tên
-  };
-
-  const screen = data.filter(item => item.category === "screen");
-  const screenAwait = screen ? screen : [];
-  // console.log(screenAwait)
+    const screen = data.filter(item => item.category === "screen");
+    const screenAwait = screen ? screen : [];
+    // console.log(screenAwait)
 
 
-  return (
-    <div className="section5">
-      <div className="section5__title">
-        <h5>Màn hình bán chạy</h5>
-        <Link to={'/render-all-products'}>
-          Xem tất cả <RightOutlined />
-        </Link>
-      </div>
+    return (
+      <div className="section5">
+        <div className="section5__title">
+          <h5>Màn hình bán chạy</h5>
+          <Link to={`/render-all-products/screen`}>
+            Xem tất cả <RightOutlined />
+          </Link>
+        </div>
 
-      <div className="section5__products">
-        <Slider {...settings}>
-          {screenAwait.map(item => (
-            <Link to={`screen-products/${item.id}`} className="section5__products-flex-item" title={item.title} key={item.id} >
-              <div className="section5__products-flex-img">
-                <img src={item.image} alt={item.title} />
-              </div>
-              <div className="section5__products-flex-title">
-                <p className='title'>{item.title}</p>
-                {item.sale>0 ? (<>
-                  <p className='old-price'>{item.price.toLocaleString('vi-VN')} VND</p>
-                </>):
-                (<>
-                  
-                </>
-              )}
-                <p className='new-price'>{item.sale>0 ? ((item.price - item.price*item.sale/100).toLocaleString('vi-VN')): (item.price.toLocaleString('vi-VN'))} VND</p>
-                <div className='section5__products-flex-title-desc'>
-                    {item.sale > 0 ? (<>
-                        <p className='sale'>-{item.sale}%</p>
-                    </>):("")}
-                    <p className='quantity'>Số lượng: <span>{item.quantity}</span></p>
+        <div className="section5__products">
+          <Slider {...settings}>
+            {screenAwait.map(item => (
+              <Link to={`screen-products/${item.id}`} className="section5__products-flex-item" title={item.title} key={item.id} >
+                <div className="section5__products-flex-img">
+                  <img src={item.image} alt={item.title} />
                 </div>
-              </div>
-            </Link>
-          ))}
-        </Slider>
+                <div className="section5__products-flex-title">
+                  <p className='title'>{item.title}</p>
+                  {item.sale>0 ? (<>
+                    <p className='old-price'>{item.price.toLocaleString('vi-VN')} VND</p>
+                  </>):
+                  (<>
+                    
+                  </>
+                )}
+                  <p className='new-price'>{item.sale>0 ? ((item.price - item.price*item.sale/100).toLocaleString('vi-VN')): (item.price.toLocaleString('vi-VN'))} VND</p>
+                  <div className='section5__products-flex-title-desc'>
+                      {item.sale > 0 ? (<>
+                          <p className='sale'>-{item.sale}%</p>
+                      </>):("")}
+                      <p className='quantity'>Số lượng: <span>{item.quantity}</span></p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </Slider>
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
-export default SectionFive;
+  export default SectionFive;

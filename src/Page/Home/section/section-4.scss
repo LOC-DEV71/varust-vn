@@ -4,6 +4,7 @@
     justify-content: space-between;
     gap: 10px;
     margin-bottom: 30px;
+    // flex-wrap: wrap;
 
     &__left{
         width: 705px;
@@ -11,6 +12,7 @@
         img{
             width: 100%;
             height: 100%;
+            // object-fit: cover;
         }
     }
     &__right{
@@ -19,6 +21,19 @@
         img{
             width: 100%;
             height: 100%;
+            // object-fit: cover;
         }
     }
+
+    @media (max-width: 1200px) {
+    flex-direction: column; 
+    align-items: center;
+
+    &__left,
+    &__right {
+      width: 100%;   
+      height: auto;  
+    }
+  }
+  
 }

@@ -52,7 +52,7 @@ function Home(){
 
 
             <div className="layout__main-sectionOne">
-                <SectionOne/>
+                <SectionOne />
             </div>
 
             <div className="layout__main-two">

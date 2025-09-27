@@ -29,6 +29,32 @@ function SectionThree(){
         autoplay: true, // Bật autoplay
         autoplaySpeed: 2500, // 3 giây mỗi lần chuyển
         arrows: true, // Bật mũi tên
+        responsive: [
+            {
+            breakpoint: 1500, // màn hình <= 1111px
+            settings: {
+                slidesToShow: 4, // hiển thị 3 sản phẩm
+            }
+            },
+            {
+                breakpoint:1270,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 1005,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 748,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     };
 
     const productSale = data.filter(item => item.sale > 0)

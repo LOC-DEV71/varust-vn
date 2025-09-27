@@ -35,7 +35,7 @@ export const routes = () => [
                 element: <News/>
             },
             {
-                path: "render-all-products",
+                path: "render-all-products/:category",
                 element: <RenderAllProducts/>
             }
         ]

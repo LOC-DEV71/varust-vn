@@ -19,6 +19,8 @@ function SectionThree(){
         fetchApi();
       }, []);
 
+   
+
     const settings = {
         pauseOnHover: false,
         dots: false, // Ẩn dots
@@ -29,6 +31,32 @@ function SectionThree(){
         autoplay: true, // Bật autoplay
         autoplaySpeed: 2500, // 3 giây mỗi lần chuyển
         arrows: true, // Bật mũi tên
+        responsive: [
+            {
+            breakpoint: 1111, // màn hình <= 1111px
+            settings: {
+                slidesToShow: 3, // hiển thị 3 sản phẩm
+            }
+            },
+            {
+            breakpoint: 850,   // màn hình <= 775px
+            settings: {
+                slidesToShow: 2, // hiển thị 2 sản phẩm
+            }
+            },
+            {
+            breakpoint: 650,   // màn hình <= 520px
+            settings: {
+                slidesToShow: 1, // hiển thị 1 sản phẩm
+            }
+            },
+            {
+            breakpoint: 400,   // màn hình <= 520px
+            settings: {
+                slidesToShow: 1, // hiển thị 1 sản phẩm
+            }
+            }
+        ]
         
     };
 
@@ -50,7 +78,7 @@ function SectionThree(){
                     <div className="section2__products-right">
                         <Slider {...settings}>
                             {productSaleAwait.map(item => (
-                                <Link to={`/screen-products/${item.id}`} className="section2__products-right-item">
+                                <Link to={`/screen-products/${item.id}`} className="section2__products-right-item" key={item.id}>
                                     <div className="section2__products-right-item-img">
                                         <img src={item.image} alt={item.title} />
                                     </div>
