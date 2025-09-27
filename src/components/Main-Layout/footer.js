@@ -25,10 +25,14 @@ function Footer(){
                     <Link to={"/updating"}>Liên hệ</Link><br/>
                 </div>
                 <div className="footer__one">
-                    <p>Chính sách</p>
-                    <Link to={"/updating"}>Chính sách bảo hành</Link><br/>
-                    <Link to={"/updating"}>Chính sách giao hàng</Link><br/>
-                    <Link to={"/updating"}>Chính sách bảo mật</Link><br/>
+                    {collapse3 ? (
+                        <>
+                            <p>Chính sách</p>
+                            <Link to={"/updating"}>Chính sách bảo hành</Link><br/>
+                            <Link to={"/updating"}>Chính sách giao hàng</Link><br/>
+                            <Link to={"/updating"}>Chính sách bảo mật</Link><br/>
+                        </>
+                    ) : ("")}
                 </div>
                 <div className="footer__one">
                     {collapse3 ? (
